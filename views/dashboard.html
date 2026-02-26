@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - Сайт на Node.js</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="dashboard">
+    <div class="container">
+        <!-- Шапка сайта -->
+        <header class="header">
+            <h1>Личный кабинет</h1>
+            <p>Добро пожаловать в ваш персональный раздел</p>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="navigation">
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/dashboard" class="active">Личный кабинет</a></li>
+                <li id="adminLink" style="display: none;"><a href="/admin">Админ панель</a></li>
+                <li><a href="#" onclick="logout()">Выход</a></li>
+            </ul>
+        </nav>
+
+        <!-- Основной контент -->
+        <main class="main-content">
+            <section class="dashboard-section">
+                <div class="user-info">
+                    <h2>Информация о пользователе</h2>
+                    <div id="userInfoContent" class="info-card">
+                        <!-- Информация о пользователе будет загружена через JavaScript -->
+                        <div class="loading">Загрузка данных...</div>
+                    </div>
+                </div>
+
+                <div class="dashboard-actions">
+                    <h3>Доступные действия</h3>
+                    <div class="action-cards">
+                        <div class="action-card">
+                            <h4>Аккаунт</h4>
+                            <p>Вы авторизованы в системе.</p>
+                        </div>
+
+                        <div class="action-card" id="adminCard" style="display: none;">
+                            <h4>Админ панель</h4>
+                            <p>Управление пользователями.</p>
+                            <button class="btn btn-primary" onclick="window.location.href='/admin'">Перейти в админ панель</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Информация о системе -->
+            <section class="info-section">
+                <h3>О системе</h3>
+                <p>Это ваш личный кабинет в системе управления пользователями.</p>
+                <ul>
+                    <li>Здесь вы можете просматривать свою персональную информацию</li>
+                    <li>Если у вас есть права администратора, вы можете управлять другими пользователями</li>
+                    <li>Все данные защищены и хранятся в зашифрованном виде</li>
+                </ul>
+            </section>
+        </main>
+
+        <!-- Подвал сайта -->
+        <footer class="footer">
+            <p>&copy; 2024 Экзаменационный проект по Node.js</p>
+        </footer>
+    </div>
+    <script src="/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт на Node.js - Главная</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="index">
+    <div class="container">
+        <!-- Шапка сайта -->
+        <header class="header">
+            <h1>Сайт на Node.js</h1>
+            <p>Регистрация, вход, роли пользователей</p>
+        </header>
+
+        <!-- Основная навигация -->
+        <nav class="navigation">
+            <ul>
+                <li><a href="/" class="active">Главная</a></li>
+                <li><a href="/login">Вход</a></li>
+                <li><a href="/register">Регистрация</a></li>
+            </ul>
+        </nav>
+
+        <!-- Основной контент -->
+        <main class="main-content">
+            <section class="welcome-section">
+                <h2>Добро пожаловать!</h2>
+                <p>Демонстрационный проект: Node.js + Express + SQL.</p>
+                
+                <div class="features">
+                    <div class="feature-card">
+                        <h3>Аутентификация</h3>
+                        <p>Регистрация и вход с хешированием паролей.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>Роли</h3>
+                        <p>Пользователь и администратор.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>SQL база данных</h3>
+                        <p>Данные пользователей хранятся в таблице users.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3>Интерфейс</h3>
+                        <p>Минималистичный, без лишних элементов.</p>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h3>Начните работу:</h3>
+                    <div class="cta-buttons">
+                        <a href="/register" class="btn btn-primary">Зарегистрироваться</a>
+                        <a href="/login" class="btn btn-secondary">Войти в систему</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2>О проекте</h2>
+                <p>Проект показывает базовую схему: браузер → сервер → база данных.</p>
+                
+                <ul class="tech-list">
+                    <li><strong>Backend:</strong> Node.js + Express.js</li>
+                    <li><strong>База данных:</strong> SQL (MySQL)</li>
+                    <li><strong>Аутентификация:</strong> bcrypt + express-session</li>
+                    <li><strong>Frontend:</strong> HTML5 + CSS3 + JavaScript</li>
+                </ul>
+
+                <div class="admin-info">
+                    <h3>Данные администратора для входа:</h3>
+                    <p><strong>Логин:</strong> admin</p>
+                    <p><strong>Пароль:</strong> admin123</p>
+                    <p class="note">*Используйте эти данные для доступа к админ панели</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Подвал сайта -->
+        <footer class="footer">
+            <p>&copy; 2024 Экзаменационный проект по Node.js</p>
+            <p>Создано для демонстрации навыков веб-разработки</p>
+        </footer>
+    </div>
+    <script src="/app.js" defer></script>
+</body>
+</html>

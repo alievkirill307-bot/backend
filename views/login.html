@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход - Сайт на Node.js</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="login">
+    <div class="container">
+        <!-- Шапка сайта -->
+        <header class="header">
+            <h1>Вход в систему</h1>
+            <p>Введите свои данные для доступа</p>
+        </header>
+
+        <!-- Основной контент -->
+        <main class="main-content">
+            <section class="auth-section">
+                <div class="auth-form">
+                    <h2>Форма входа</h2>
+                    
+                    <!-- Форма входа -->
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="username">Логин:</label>
+                            <input type="text" id="username" name="username" required 
+                                   placeholder="Введите ваш логин">
+                            <small class="form-help">Введите логин, который вы использовали при регистрации</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Пароль:</label>
+                            <input type="password" id="password" name="password" required 
+                                   placeholder="Введите ваш пароль">
+                            <small class="form-help">Введите ваш пароль</small>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Войти</button>
+                            <a href="/" class="btn btn-secondary">На главную</a>
+                        </div>
+                    </form>
+
+                    <!-- Сообщение об ошибке -->
+                    <div id="errorMessage" class="error-message" style="display: none;">
+                        <!-- Ошибка будет вставлена сюда через JavaScript -->
+                    </div>
+
+                    <!-- Сообщение об успехе -->
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <!-- Успешное сообщение будет вставлено сюда через JavaScript -->
+                    </div>
+
+                    <!-- Дополнительная информация -->
+                    <div class="auth-info">
+                        <p>Еще нет аккаунта? <a href="/register">Зарегистрируйтесь</a></p>
+                        
+                        <div class="admin-credentials">
+                            <h4>Администратор (по умолчанию)</h4>
+                            <p><strong>Логин:</strong> admin</p>
+                            <p><strong>Пароль:</strong> admin123</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Подвал сайта -->
+        <footer class="footer">
+            <p>&copy; 2024 Экзаменационный проект по Node.js</p>
+        </footer>
+    </div>
+    <script src="/app.js" defer></script>
+</body>
+</html>

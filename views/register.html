@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - Сайт на Node.js</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="register">
+    <div class="container">
+        <!-- Шапка сайта -->
+        <header class="header">
+            <h1>Регистрация нового пользователя</h1>
+            <p>Создайте новый аккаунт для доступа к системе</p>
+        </header>
+
+        <!-- Основной контент -->
+        <main class="main-content">
+            <section class="auth-section">
+                <div class="auth-form">
+                    <h2>Форма регистрации</h2>
+                    
+                    <!-- Форма регистрации -->
+                    <form id="registerForm">
+                        <div class="form-group">
+                            <label for="username">Логин:</label>
+                            <input type="text" id="username" name="username" required 
+                                   placeholder="Придумайте уникальный логин"
+                                   minlength="3" maxlength="20">
+                            <small class="form-help">Логин должен содержать от 3 до 20 символов</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required 
+                                   placeholder="your.email@example.com">
+                            <small class="form-help">Введите действующий email адрес</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Пароль:</label>
+                            <input type="password" id="password" name="password" required 
+                                   placeholder="Придумайте надежный пароль"
+                                   minlength="6">
+                            <small class="form-help">Пароль должен содержать минимум 6 символов</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirmPassword">Подтверждение пароля:</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required 
+                                   placeholder="Введите пароль еще раз">
+                            <small class="form-help">Повторите пароль для подтверждения</small>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                            <a href="/" class="btn btn-secondary">На главную</a>
+                        </div>
+                    </form>
+
+                    <!-- Сообщение об ошибке -->
+                    <div id="errorMessage" class="error-message" style="display: none;">
+                        <!-- Ошибка будет вставлена сюда через JavaScript -->
+                    </div>
+
+                    <!-- Сообщение об успехе -->
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <!-- Успешное сообщение будет вставлено сюда через JavaScript -->
+                    </div>
+
+                    <!-- Дополнительная информация -->
+                    <div class="auth-info">
+                        <p>Уже есть аккаунт? <a href="/login">Войдите в систему</a></p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Подвал сайта -->
+        <footer class="footer">
+            <p>&copy; 2024 Экзаменационный проект по Node.js</p>
+        </footer>
+    </div>
+    <script src="/app.js" defer></script>
+</body>
+</html>

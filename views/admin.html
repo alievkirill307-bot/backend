@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ панель - Сайт на Node.js</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="admin">
+    <div class="container">
+        <!-- Шапка сайта -->
+        <header class="header">
+            <h1>Админ панель</h1>
+            <p>Управление пользователями системы</p>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="navigation">
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/dashboard">Личный кабинет</a></li>
+                <li><a href="/admin" class="active">Админ панель</a></li>
+                <li><a href="#" onclick="logout()">Выход</a></li>
+            </ul>
+        </nav>
+
+        <!-- Основной контент -->
+        <main class="main-content">
+            <section class="admin-section">
+                <!-- Информация об администраторе -->
+                <div class="admin-info">
+                    <h2>Информация о текущем администраторе</h2>
+                    <div id="adminInfoContent" class="info-card">
+                        <!-- Информация будет загружена через JavaScript -->
+                        <div class="loading">Загрузка данных...</div>
+                    </div>
+                </div>
+
+                <!-- Управление пользователями -->
+                <div class="users-management">
+                    <h2>Управление пользователями</h2>
+                    
+                    <!-- Панель управления -->
+                    <div class="control-panel">
+                        <div class="control-actions">
+                            <button class="btn btn-primary" onclick="loadUsers()">
+                                Обновить список
+                            </button>
+                            <div class="user-stats">
+                                <span id="totalUsers">Всего пользователей: 0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Таблица пользователей -->
+                    <div class="users-table-container">
+                        <table class="users-table" id="usersTable">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Логин</th>
+                                    <th>Email</th>
+                                    <th>Роль</th>
+                                    <th>Дата регистрации</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody id="usersTableBody">
+                                <!-- Данные пользователей будут загружены через JavaScript -->
+                                <tr>
+                                    <td colspan="6" class="loading-row">
+                                        <div class="loading">Загрузка пользователей...</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Сообщение об отсутствии пользователей -->
+                    <div id="noUsersMessage" class="info-message" style="display: none;">
+                        <p>📝 Пользователи не найдены</p>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <!-- Подвал сайта -->
+        <footer class="footer">
+            <p>&copy; 2024 Экзаменационный проект по Node.js</p>
+        </footer>
+    </div>
+    <script src="/app.js" defer></script>
+</body>
+</html>
